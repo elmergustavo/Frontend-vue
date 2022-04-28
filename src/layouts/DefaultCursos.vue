@@ -18,7 +18,7 @@
       </div>
       <hr>
       <div class="footertres">
-        <h3>TeAyudo</h3>
+        <h3 class="logohome" @click="llevarhome()">TeAyudo</h3>
       </div>
     </footer>
 
@@ -26,6 +26,25 @@
 
   
 </template>
+
+
+
+<script>
+import { mapActions } from "vuex";
+
+export default {
+ 
+ methods: {
+
+...mapActions(["llevarhome"]),
+
+
+ }
+
+
+}
+</script>
+
 
 <style scoped>
 #cabecera {
@@ -74,4 +93,10 @@
   margin-left: 0.1cm;
   text-align:left;
  }
+ 
+ .logohome{
+
+   cursor: pointer;
+ }
+
 </style>

@@ -144,6 +144,18 @@ export default createStore({
       commit("setUserId", null);
       
     },
+
+    abrirTutor(){
+      router.push('/pasos');
+    },
+
+    abrirEstudiante(){
+      router.push('/studentForm');
+    },
+
+    llevarhome(){
+      router.push('/pantallaPrincipal');
+    }
   },
   modules: {},
 });

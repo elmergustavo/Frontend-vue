@@ -6,8 +6,8 @@
                     <img class="logo" src="https://github.com/Meerri/src-images/blob/main/images/logo.png?raw=true" alt="Logo-TeAyudo">
                 </div>
                 <div class="container-nav">
-                    <a href="" class="container-button">Aplicar a Tutor</a>
-                    <a href="" class="container-button">Mi Perfil de Estudiante</a>
+                    <a href="" class="container-button" @click="abrirTutor()">Aplicar a Tutor</a>
+                    <a href="" class="container-button" @click="abrirEstudiante()">Mi Perfil de Estudiante</a>
                     <a href="" class="container-button" @click="cerrarSesion()">Cerrar Sesión</a>
                 </div>
             </nav>
@@ -83,6 +83,8 @@ export default {
  methods: {
 
 ...mapActions(["cerrarSesion"]),
+...mapActions(["abrirTutor"]),
+...mapActions(["abrirEstudiante"]),
 
  }
 
