@@ -4,6 +4,8 @@ import HomeView from '../views/HomeView.vue'
 import PasosView from '../views/PasosView.vue'
 import CursosView from '../views/CursosView.vue'
 import StudentForm from '../views/StudentForm.vue'
+import store from '../store'
+
 const routes = [
   {
     path: '/',
