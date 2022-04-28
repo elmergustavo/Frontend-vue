@@ -6,6 +6,7 @@ export default createStore({
   state: {
     state: {
       token: null,
+      userid: null
     },
   },
   getters: {},
@@ -13,6 +14,9 @@ export default createStore({
     setToken(state, payload) {
       state.token = payload;
     },
+    setUserId(state, payload){
+      state.userid = payload;
+    }
   },
   actions: {
     async registerUser(commit, usuario) {
@@ -41,8 +45,11 @@ export default createStore({
         console.log(data.data.token);
 
         commit("setToken", data.data.token);
+        commit("setUserId", data.data.id);
 
         localStorage.setItem("token", data.data.token);
+        localStorage.setItem("userid", data.data.id);
+        // this.$router.push('pasos')
 
 
 
@@ -130,7 +137,9 @@ export default createStore({
 
     cerrarSesion({ commit }) {
       localStorage.removeItem("token");
+      localStorage.removeItem("userid");
       commit("setToken", null);
+      commit("setUserID", null)
     },
   },
   modules: {},

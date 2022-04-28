@@ -33,7 +33,7 @@
         <input
           type="email"
           class="input-field"
-          placeholder="Nombre de Usuario"
+          placeholder="Correo Electrónico"
           v-model="iniciar.email"
           required
         />
