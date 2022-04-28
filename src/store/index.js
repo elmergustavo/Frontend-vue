@@ -50,7 +50,7 @@ export default createStore({
 
         localStorage.setItem("token", data.data.token);
         localStorage.setItem("userid", data.data.id);
-        router.push('/pasos');
+        router.push('/pantallaPrincipal');
 
 
 
@@ -137,10 +137,12 @@ export default createStore({
     },
 
     cerrarSesion({ commit }) {
+      router.push('/');
       localStorage.removeItem("token");
       localStorage.removeItem("userid");
       commit("setToken", null);
-      commit("setUserID", null)
+      commit("setUserId", null);
+      
     },
   },
   modules: {},
