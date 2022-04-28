@@ -1,6 +1,7 @@
 import { createStore } from "vuex";
 import axios from "axios";
 import Swal from "sweetalert2";
+import router from "../router";
 
 export default createStore({
   state: {
@@ -49,7 +50,7 @@ export default createStore({
 
         localStorage.setItem("token", data.data.token);
         localStorage.setItem("userid", data.data.id);
-        // this.$router.push('pasos')
+        router.push('/pasos');
 
 
 
