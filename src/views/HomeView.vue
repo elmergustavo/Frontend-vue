@@ -96,8 +96,8 @@ export default {
       },
 
       iniciar: {
-        email: "corre@correo.com",
-        password: "123456789",
+        email: "",
+        password: "",
       },
     };
   },

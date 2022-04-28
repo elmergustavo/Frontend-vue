@@ -2,6 +2,23 @@
   <router-view/>
 </template>
 
+
+
+<script>
+import {mapActions} from 'vuex'
+export default {
+  methods: {
+...mapActions(['leerToken', 'cerrarSesion'])
+
+  },
+
+created(){
+  this.leerToken()
+}
+
+}
+</script>
+
 <style>
 @import url('https://fonts.googleapis.com/css?family=Sanchez');
 #app {
