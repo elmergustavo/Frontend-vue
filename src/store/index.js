@@ -30,7 +30,7 @@ export default createStore({
       }
     },
 
-    async iniciarSesion( {commit}, usuario) {
+    async iniciarSesion({ commit }, usuario) {
       try {
         //const res = await fetch
         const data = await axios.post(
@@ -40,23 +40,18 @@ export default createStore({
 
         console.log(data.data.token);
 
-        commit('setToken', data.data.token )
+        commit("setToken", data.data.token);
 
         localStorage.setItem("token", data.data.token);
-
       } catch (error) {
         console.log(error);
       }
     },
 
     async registrarTutor(commit, tutor) {
-
-     
-      
-
       let str = tutor.CoursesMaster;
-      let arr = str.split(', '); 
-      tutor.CoursesMaster = arr
+      let arr = str.split(", ");
+      tutor.CoursesMaster = arr;
       //dividir la cadena de texto por una coma
       console.log(arr);
       try {
@@ -66,33 +61,26 @@ export default createStore({
           tutor
         );
 
-        Swal.fire(
-          'Good job!',
-          'You clicked the button!',
-          'success'
-        )
+        Swal.fire("Good job!", "You clicked the button!", "success");
         console.log(data);
       } catch (error) {
         console.log(error);
       }
     },
 
-    leerToken({commit}){
-if(localStorage.getItem('token')){
-
-  commit('setToken', localStorage.getItem('token'))
-}  else{
-
-  commit('setToken', null)
-}
-
+    leerToken({ commit }) {
+      if (localStorage.getItem("token")) {
+        commit("setToken", localStorage.getItem("token"));
+      } else {
+        commit("setToken", null);
+      }
     },
 
     cerrarSesion({ commit }) {
-      commit('setToken', null)
-      localStorage.removeItem('token')
-  }
-
+      console.log("holamundo");
+      localStorage.removeItem("token");
+      commit("setToken", null);
+    },
   },
   modules: {},
 });
