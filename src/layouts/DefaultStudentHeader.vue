@@ -2,21 +2,10 @@
     <main>
         <header>
             <div>
-                <img class="logo" src="" alt="Logo-TeAyudo">
+                <img class="logo" src="@/assets/logo.png" alt="Logo-TeAyudo">
             </div>
         </header>
         
-        <hr>
-        <footer>
-            <div class="container-footer2">
-                <div>
-                    <img class="logo2" src="" alt="Logo-TeAyudo">
-                </div>
-                <div>
-                    <p>GT</p>
-                </div>
-            </div>
-        </footer>
     </main>
 </template>
 
@@ -34,6 +23,7 @@ header{
 }
 
 /* footer */
+
 .container-footer2{
     margin: 0px 25px 0px 25px ;
     display: flex;

@@ -4,24 +4,15 @@
   </section>
   <div class="container">
     <div>
-      <img src="" alt="student" />
+      <img src="@/assets/student.svg" alt="student" />
     </div>
     <div>
       <h1>Bienvenido</h1>
       <h2>Se le solicitara llenar el siguiente formulario</h2>
 
       <br />
-      <a
-        href="student"
-        class="btn btn-outline-success"
-        style="margin-left: 100%; margin: 0.1cm"
-        >Siguiente</a
-      >
-    </div>
-  </div>
 
-  <section>
-    <button
+      <button
       type="button"
       class="btn btn-primary"
       data-bs-toggle="modal"
@@ -104,7 +95,14 @@
         </div>
       </div>
     </form>
-  </section>
+      <a
+        href="Student"
+        class="btn btn-outline-success"
+        style="margin-left: 100%; margin: 0.1cm"
+        >Siguiente</a
+      >
+    </div>
+  </div>
 </template>
 
 <script>
@@ -128,9 +126,9 @@ export default {
 
 <style scoped>
 .container {
-  margin: 25px;
+  margin-top: 25px;
   display: flex;
-  gap: 60px;
+  gap: 20px;
 }
 
 img {
@@ -139,5 +137,10 @@ img {
 
 h2 {
   color: rgba(0, 0, 0, 0.56);
+  font-size: 30px;
+}
+
+h1 {
+  text-align: left;
 }
 </style>
