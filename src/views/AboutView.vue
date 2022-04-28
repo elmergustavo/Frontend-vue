@@ -2,6 +2,8 @@
     <div class="about">
 <h1>Ruta Protegida</h1>
     </div>
+
+    <button @click="cerrarSesion">Cerrar Sesión</button>
 </template>
 
 <script>
@@ -21,7 +23,7 @@ methods: {
 
         try{
 
-            const res = await axios.get('https://te-ayudo-api.herokuapp.com/admin/token', {
+            const res = await axios.get('https://te-ayudo-api.herokuapp.com/admin', {
 
                 headers: {
 

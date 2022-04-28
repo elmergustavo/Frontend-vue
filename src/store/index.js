@@ -86,7 +86,12 @@ if(localStorage.getItem('token')){
   commit('setToken', null)
 }
 
-    }
+    },
+
+    cerrarSesion({ commit }) {
+      commit('setToken', null)
+      localStorage.removeItem('token')
+  }
 
   },
   modules: {},
