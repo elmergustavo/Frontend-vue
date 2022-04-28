@@ -6,12 +6,10 @@
                         <img class="logo" src="@/static/image/logo.png" alt="Logo-TeAyudo">
                     </div>
                     <div>
-                        <input type="search" placeholder="Buscar el curso ....">
-                        <button>Buscar</button>
                     </div>
                 </nav>
         </header>
-        <Nuxt />
+
         <footer>
             <div class="container-footer2">
                 <div>
