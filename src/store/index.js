@@ -30,7 +30,7 @@ export default createStore({
       }
     },
 
-    async iniciarSesion(commit, usuario) {
+    async iniciarSesion( {commit}, usuario) {
       try {
         //const res = await fetch
         const data = await axios.post(

@@ -21,7 +21,7 @@ methods: {
 
         try{
 
-            const res = await axios.get('http://localhost:3000/admin/token', {
+            const res = await axios.get('https://te-ayudo-api.herokuapp.com/admin/token', {
 
                 headers: {
 
