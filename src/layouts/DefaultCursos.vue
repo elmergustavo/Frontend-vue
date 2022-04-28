@@ -12,7 +12,6 @@
         </div>
       </div>
     </div>
-    <Nuxt />
     <footer class="footer">
       <div class="footerdos">
         <h3>GT</h3>

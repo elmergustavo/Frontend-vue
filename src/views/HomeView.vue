@@ -78,7 +78,7 @@
           required
         />
         <input type="checkbox" class="check-box" /><span>Aplicar a Tutor</span>
-        <button type="submit" class="submit-btn">Registrarse</button>
+        <button type="submit" class="submit-btn" to="/cursoscursos">Registrarse</button>
       </form>
     </div>
   </div>

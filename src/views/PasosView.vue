@@ -7,24 +7,24 @@
       <div class="buttom-form">
         <div class="row">
           <card
-            imagen="./assets/images/nombre.png" alt="" @load="loadImage"
+            imagen="https://github.com/Meerri/src-images/blob/main/images/nombre.png?raw=true"
             message="Ingresa tu nombre completo para saber cómo dirigirnos hacia ti."
           />
           <card
-            imagen="static/image/descripcion.png"
+            imagen="https://github.com/Meerri/src-images/blob/main/images/descripcion.png?raw=true"
             message="Descríbete en palabras para que tus futuros alumnos te conozcan brevemente."
           />
           <card
-            imagen="/image/gradoacademico.png"
+            imagen="https://github.com/Meerri/src-images/blob/main/images/gradoacademico.png?raw=true"
             message="Anota el grado académico que tienes para conocer tus mejores habilidades."
           />
           <card
-            imagen="/image/habilidades.png"
+            imagen="https://github.com/Meerri/src-images/blob/main/images/habilidades.png?raw=true"
             message="Anota con precisión tus habilidades profesionales para ayudarte a conseguir más trabajo."
           />
           <card
-            imagen="/image/datoscorreocelu.png"
-            message=" Agrega credibilidad proporcionando tus datos de teléfono o celular y correo electrónico para mantener una comunidad segura."
+            imagen="https://github.com/Meerri/src-images/blob/main/images/datoscorreocelu.png?raw=true"
+            message="Agrega credibilidad proporcionando tus datos de teléfono o celular y correo electrónico para mantener una comunidad segura."
           />
         </div>
       </div>
@@ -41,6 +41,8 @@
         </button>
 
         <form @submit.prevent="registrarTutor(tutor)">
+          <hr id="hr">
+          <b-table striped hover :items="submittedCursos" :fields="fields"></b-table>
           <div
             class="modal fade"
             id="exampleModal"
@@ -72,6 +74,8 @@
                         class="form-control"
                         id="recipient-name"
                         v-model="tutor.name"
+                        invalid-feedback="Llenar este campo"
+                        required
                       />
                     </div>
                     <div class="mb-3">
@@ -83,6 +87,8 @@
                         class="form-control"
                         id="recipient-name"
                         v-model="tutor.lastName"
+                        invalid-feedback="Llenar este campo"
+                        required
                       />
                     </div>
                     <div class="mb-3">
@@ -93,6 +99,8 @@
                         class="form-control"
                         id="message-text"
                         v-model="tutor.description"
+                        invalid-feedback="Llenar este campo"
+                        required
                       ></textarea>
                     </div>
                     <div class="mb-3">
@@ -104,6 +112,8 @@
                         class="form-control"
                         id="recipient-name"
                         v-model="tutor.academicDegree"
+                        invalid-feedback="Llenar este campo"
+                        required
                       />
                     </div>
                     <div class="mb-3">
@@ -115,6 +125,8 @@
                         class="form-control"
                         id="recipient-name"
                         v-model="tutor.CoursesMaster"
+                        invalid-feedback="Llenar este campo"
+                        required
                       />
                     </div>
                     <div class="mb-3">
@@ -126,6 +138,8 @@
                         class="form-control"
                         id="recipient-name"
                         v-model="tutor.email"
+                        invalid-feedback="Llenar este campo"
+                        required
                       />
                     </div>
                     <div class="mb-3">
@@ -137,6 +151,8 @@
                         class="form-control"
                         id="recipient-name"
                         v-model="tutor.phone"
+                        invalid-feedback="Llenar este campo"
+                        required
                       />
                     </div>
                   </form>
@@ -175,7 +191,6 @@ import card from "@/components/CardTemplate.vue";
 //import testmodal from '@/components/TestModal.vue'
 import { mapActions } from "vuex";
 
-
 export default {
   data() {
     return {
@@ -186,7 +201,7 @@ export default {
         academicDegree: "",
         CoursesMaster: "",
         email: "",
-        phone: ""
+        phone: "",
       },
 
       iniciar: {
@@ -195,13 +210,28 @@ export default {
       },
     };
   },
-
-  components: { pasos, card },
+    CoursesMaster: '',
+    CoursesMasterState: null,
+    fields:['nombre', 'apellido' ,'form.CoursesMaster' ],
+    submittedCursos: [], 
+    components: { pasos, card },
 
   methods: {
     ...mapActions(["registrarTutor"]),
 
-   
+    handleSubmit() {
+        // Exit when the form isn't valid
+        if (!this.checkFormValidity()) {
+          return
+        }
+        // Push the name to submitted names
+        this.submittedCursos.push({ nombre: this.nombre, apellido: this.apellido, CoursesMaster: this.form.CoursesMaster })
+        console.log(this.submittedCursos)
+        // Hide the modal manually
+        this.$nextTick(() => {
+          this.$bvModal.hide('modal-prevent-closing')
+        })
+      }
   },
 };
 </script>

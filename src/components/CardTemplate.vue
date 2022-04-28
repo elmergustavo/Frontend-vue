@@ -14,14 +14,14 @@
 <script>
   export default {
       props:{
-          message: {
+        message: {
               type: String,
               required: true
           },
-          imagen: {
-              type: String,
-              required: true
-          }
+        imagen: {
+          type: String,
+          required: ('/assets/images/')
+        }
       }
   }
 </script>
