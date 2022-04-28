@@ -47,10 +47,21 @@ export default createStore({
     },
 
     async registrarTutor(commit, tutor) {
-
+      if (tutor.name === "" || 
+      tutor.lastName === "" ||
+      tutor.description=== "" || 
+      tutor.academicDegree=== "" || 
+      tutor.CoursesMaster=== "" ||
+      tutor.email=== "" || 
+      tutor.phone=== "" ){
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Debes llenar todos los campos',
+        })
+        return
+      }
      
-      
-
       let str = tutor.CoursesMaster;
       let arr = str.split(', '); 
       tutor.CoursesMaster = arr
@@ -64,8 +75,8 @@ export default createStore({
         );
 
         Swal.fire(
-          'Good job!',
-          'You clicked the button!',
+          'Tutor completado',
+          'Gracias por participar en TeAyudo',
           'success'
         )
         console.log(data);

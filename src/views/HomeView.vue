@@ -169,7 +169,7 @@ export default {
   height: 100%;
   width: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(4, 4, 4, 4)),
-    url(@/static/image/stud.png);
+    url(@/assets/images/stud.png);
   background-position: center;
   position: absolute;
 }
