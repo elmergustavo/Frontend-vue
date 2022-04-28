@@ -12,7 +12,7 @@
       </div>
       <div class="google-icon">
         <div class="g-signin2" data-onsuccess="onSignIn"></div>
-        <p class="inicio">Inicia Sesión con Google</p>
+        <img class="inicio" src="">
         <div class="data">
           <p>Name</p>
           <p id="name" class="alert alert-success"></p>
@@ -77,7 +77,6 @@
           v-model="usuario.password"
           required
         />
-        <input type="checkbox" class="check-box" /><span>Aplicar a Tutor</span>
         <button type="submit" class="submit-btn" to="/cursoscursos">Registrarse</button>
       </form>
     </div>
@@ -232,29 +231,33 @@ export default {
 }
 
 .submit-btn {
-  width: 85%;
+  width: 65%;
   padding: 10px 30px;
+  position: absolute;
+  top: 200px;
+  left: 50px;
   cursor: pointer;
   display: block;
   margin: auto;
   background: linear-gradient(to right, #0ec979, #1cd788);
   border: 0;
   outline: none;
-  border-radius: 30px;
+  border-radius: 5px;
 }
 
 .submit-login-btn {
   width: 85%;
-  position: relative;
   padding: 10px 30px;
-  top: 4em;
+  position: absolute;
+  top: 170px;
+  left: 20px;
   cursor: pointer;
   display: block;
   margin: auto;
   background: linear-gradient(to right, #0ec979, #1cd788);
   border: 0;
   outline: none;
-  border-radius: 30px;
+  border-radius: 5px;
 }
 
 .check-box {
@@ -295,5 +298,6 @@ span {
   left: 40%;
   margin-top: -50px;
   margin-left: -50px;
+  display: none;
 }
 </style>
