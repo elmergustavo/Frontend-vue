@@ -3,11 +3,11 @@
         <header>
             <nav>
                 <div>
-                    <img class="logo" src="https://github.com/Meerri/src-images/blob/main/images/logo.png?raw=true" alt="Logo-TeAyudo">
+                    <img class="logo" src="https://github.com/Meerri/src-images/blob/main/images/logo.png?raw=true">
                 </div>
                 <div class="container-nav">
-                    <a href="" class="container-button">Aplicar a Tutor</a>
-                    <a href="" class="container-button">Mi Perfil de Estudiante</a>
+                    <a href="" class="container-button" @click="abrirTutor()">Aplicar a Tutor</a>
+                    <a href="" class="container-button" @click="abrirEstudiante()">Mi Perfil de Estudiante</a>
                     <a href="" class="container-button" @click="cerrarSesion()">Cerrar Sesión</a>
                 </div>
             </nav>
@@ -64,7 +64,7 @@
             </div>
             <div class="container-footer2">
                 <div>
-                    <img class="logo2" src="https://github.com/Meerri/src-images/blob/main/images/logo.png?raw=true" alt="Logo-TeAyudo">
+                    <img class="logo2" src="https://github.com/Meerri/src-images/blob/main/images/logo.png?raw=true">
                 </div>
                 <div>
                     <p>GT</p>
@@ -83,6 +83,8 @@ export default {
  methods: {
 
 ...mapActions(["cerrarSesion"]),
+...mapActions(["abrirTutor"]),
+...mapActions(["abrirEstudiante"]),
 
  }
 
@@ -93,8 +95,9 @@ export default {
 <style scoped>
 .logo{
     display:flex;
-    width: 200px;
+    width: 150px;
     align-items: center;
+    margin-top: -20px;
 }
 
 nav{
@@ -130,13 +133,14 @@ p{
 
 /* footer */
 .container-footer{
-    margin:50px 25px 0px 25px;
-    display: flex;
+    margin-left: 170px;
+    margin-top: 250px;
+    display: flex;    
     gap: 45px;
 }
 
 .container-p{
-    /* text-align: center; */
+    margin-left: 80px;
     font-size: 21px;
 }
 
@@ -149,6 +153,7 @@ li{
 
 .container-footer2{
     margin: 0px 25px 0px 25px ;
+    margin-top: 290px;
     display: flex;
     justify-content: space-between;
 }

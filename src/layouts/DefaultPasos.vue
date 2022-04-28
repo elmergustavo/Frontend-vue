@@ -2,7 +2,7 @@
   <main>
     <div id="cabecera">
       <div class="cabecera">
-        <h4>TeAyudo</h4>
+        <h4 class= "logohome" @click="llevarhome()">TeAyudo</h4>
         <hr style="margin: 0px;">
         <div class="cabecerahelp">
           <h5 class="tr">
@@ -28,6 +28,23 @@
   </main>
 
 </template>
+
+<script>
+import { mapActions } from "vuex";
+
+export default {
+ 
+ methods: {
+
+...mapActions(["llevarhome"]),
+
+
+ }
+
+
+}
+</script>
+
 
 <style scoped>
 #cabecera {
@@ -82,5 +99,10 @@
   padding: 0.3cm;
   margin-left: 0.1cm;
   text-align:left;
+ }
+
+ .logohome{
+
+   cursor: pointer;
  }
 </style>
