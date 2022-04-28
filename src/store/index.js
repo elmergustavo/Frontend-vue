@@ -20,7 +20,7 @@ export default createStore({
       try {
         //const res = await fetch
         const data = await axios.post(
-          "http://localhost:3000/user/register",
+          "https://te-ayudo-api.herokuapp.com/user/register",
           usuario
         );
 
@@ -34,13 +34,16 @@ export default createStore({
       try {
         //const res = await fetch
         const data = await axios.post(
-          "http://localhost:3000/user/login",
+          "https://te-ayudo-api.herokuapp.com/user/login",
           usuario
         );
 
         console.log(data.data.token);
 
+        commit('setToken', data.data.token )
+
         localStorage.setItem("token", data.data.token);
+
       } catch (error) {
         console.log(error);
       }
@@ -73,6 +76,18 @@ export default createStore({
         console.log(error);
       }
     },
+
+    leerToken({commit}){
+if(localStorage.getItem('token')){
+
+  commit('setToken', localStorage.getItem('token'))
+}  else{
+
+  commit('setToken', null)
+}
+
+    }
+
   },
   modules: {},
 });
