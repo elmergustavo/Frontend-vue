@@ -20,7 +20,7 @@ export default createStore({
       try {
         //const res = await fetch
         const data = await axios.post(
-          "http://localhost:3000/user/register",
+          "https://te-ayudo-api.herokuapp.com/user/register",
           usuario
         );
 
@@ -34,7 +34,7 @@ export default createStore({
       try {
         //const res = await fetch
         const data = await axios.post(
-          "http://localhost:3000/user/login",
+          "https://te-ayudo-api.herokuapp.com/user/login",
           usuario
         );
 
@@ -52,14 +52,14 @@ export default createStore({
       
 
       let str = tutor.CoursesMaster;
-      let arr = str.split(','); 
+      let arr = str.split(', '); 
       tutor.CoursesMaster = arr
       //dividir la cadena de texto por una coma
       console.log(arr);
       try {
         //const res = await fetch
         const data = await axios.post(
-          "http://localhost:3000/tutor",
+          "https://te-ayudo-api.herokuapp.com/tutor",
           tutor
         );
 

@@ -3,8 +3,9 @@
 </template>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Sanchez');
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Sanchez, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
