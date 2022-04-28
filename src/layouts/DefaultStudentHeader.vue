@@ -2,15 +2,15 @@
     <main>
         <header>
             <div>
-                <img class="logo" src="@/static/image/logo.png" alt="Logo-TeAyudo">
+                <img class="logo" src="" alt="Logo-TeAyudo">
             </div>
         </header>
-        <Nuxt />
+        
         <hr>
         <footer>
             <div class="container-footer2">
                 <div>
-                    <img class="logo2" src="@/static/image/logo.png" alt="Logo-TeAyudo">
+                    <img class="logo2" src="" alt="Logo-TeAyudo">
                 </div>
                 <div>
                     <p>GT</p>

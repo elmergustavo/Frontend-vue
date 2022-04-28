@@ -37,10 +37,13 @@ export default createStore({
           "https://te-ayudo-api.herokuapp.com/user/login",
           usuario
         );
-
+        console.log(data.data)
         console.log(data.data.token);
 
         localStorage.setItem("token", data.data.token);
+
+
+
       } catch (error) {
         console.log(error);
       }
@@ -80,6 +83,36 @@ export default createStore({
           'success'
         )
         console.log(data);
+      } catch (error) {
+        console.log(error);
+      }
+    },
+
+    async registrarStudent(commit, student) {
+
+      if (student.currentGrade === '' || student.phone === ''){
+
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Debes llenar todos los campos',
+        })
+        return
+      }
+      console.log(student)
+      try {
+        //const res = await fetch
+        const data = await axios.post(
+          "https://te-ayudo-api.herokuapp.com/student",
+          student
+        );
+        Swal.fire(
+          'Estudiante completado',
+          'Gracias por participar en TeAyudo',
+          'success'
+        )
+        console.log(data);
+
       } catch (error) {
         console.log(error);
       }
