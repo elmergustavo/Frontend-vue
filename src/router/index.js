@@ -4,6 +4,7 @@ import HomeView from '../views/HomeView.vue'
 import PasosView from '../views/PasosView.vue'
 import CursosView from '../views/CursosView.vue'
 import StudentForm from '../views/StudentForm.vue'
+import PantallaPrincipal from '../views/PantallaPrincipal.vue'
 import store from '../store'
 
 const routes = [
@@ -47,7 +48,18 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: StudentForm,
     meta: {rutaProtegida: true}
+  },
+
+  {
+    path: '/pantallaPrincipal',
+    name: 'pantallaPrincipal',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: PantallaPrincipal,
+    meta: {rutaProtegida: true}
   }
+  
 ]
 
 const router = createRouter({

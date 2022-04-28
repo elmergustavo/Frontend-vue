@@ -3,15 +3,15 @@
         <header>
             <nav>
                 <div>
-                    <img class="logo" src="@/static/image/logo.png" alt="Logo-TeAyudo">
+                    <img class="logo" src="https://github.com/Meerri/src-images/blob/main/images/logo.png?raw=true" alt="Logo-TeAyudo">
                 </div>
                 <div class="container-nav">
-                    <a href="">Contactanos</a>
-                    <a href="" class="container-button">Iniciar Sesión</a>
+                    <a href="" class="container-button">Aplicar a Tutor</a>
+                    <a href="" class="container-button">Mi Perfil de Estudiante</a>
+                    <a href="" class="container-button" @click="cerrarSesion()">Cerrar Sesión</a>
                 </div>
             </nav>
         </header>
-        <Nuxt />
         <footer>
             <div class="container-footer">
                 <div>
@@ -64,7 +64,7 @@
             </div>
             <div class="container-footer2">
                 <div>
-                    <img class="logo2" src="@/static/image/logo.png" alt="Logo-TeAyudo">
+                    <img class="logo2" src="https://github.com/Meerri/src-images/blob/main/images/logo.png?raw=true" alt="Logo-TeAyudo">
                 </div>
                 <div>
                     <p>GT</p>
@@ -73,6 +73,22 @@
         </footer>
     </main>
 </template>
+
+
+<script>
+import { mapActions } from "vuex";
+
+export default {
+ 
+ methods: {
+
+...mapActions(["cerrarSesion"]),
+
+ }
+
+
+}
+</script>
 
 <style scoped>
 .logo{
