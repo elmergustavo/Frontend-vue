@@ -12,7 +12,7 @@
       </div>
       <div class="google-icon">
         <div class="g-signin2" data-onsuccess="onSignIn"></div>
-        <img class="inicio" src="">
+        <img class="inicio" src="https://github.com/Meerri/src-images/blob/main/images/logo.png?raw=true">
         <div class="data">
           <p>Name</p>
           <p id="name" class="alert alert-success"></p>
@@ -293,11 +293,12 @@ span {
 }
 
 .inicio {
+  width: 40%;
   position: absolute;
   top: 30%;
-  left: 40%;
+  left: 43%;
   margin-top: -50px;
   margin-left: -50px;
-  display: none;
+  /* display: none; */
 }
 </style>
