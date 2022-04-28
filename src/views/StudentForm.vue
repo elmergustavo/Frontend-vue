@@ -96,7 +96,7 @@
       </div>
     </form>
       <a
-        href="student"
+        href="Student"
         class="btn btn-outline-success"
         style="margin-left: 100%; margin: 0.1cm"
         >Siguiente</a
