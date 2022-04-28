@@ -7,14 +7,13 @@
       <div class="buttom-form">
         <div class="row">
           <card
-            imagen="/image/nombre.png"
+            imagen="./assets/images/nombre.png" alt="" @load="loadImage"
             message="Ingresa tu nombre completo para saber cómo dirigirnos hacia ti."
           />
           <card
-            imagen="/image/descripcion.png"
+            imagen="static/image/descripcion.png"
             message="Descríbete en palabras para que tus futuros alumnos te conozcan brevemente."
           />
-
           <card
             imagen="/image/gradoacademico.png"
             message="Anota el grado académico que tienes para conocer tus mejores habilidades."
@@ -93,7 +92,7 @@
                       <textarea
                         class="form-control"
                         id="message-text"
-                        v-model="tutor.descripcion"
+                        v-model="tutor.description"
                       ></textarea>
                     </div>
                     <div class="mb-3">
@@ -104,6 +103,7 @@
                         type="text"
                         class="form-control"
                         id="recipient-name"
+                        v-model="tutor.academicDegree"
                       />
                     </div>
                     <div class="mb-3">
@@ -183,6 +183,7 @@ export default {
         name: "",
         lastName: "",
         description: "",
+        academicDegree: "",
         CoursesMaster: "",
         email: "",
         phone: ""
