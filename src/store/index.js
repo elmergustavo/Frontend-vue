@@ -1,5 +1,6 @@
 import { createStore } from "vuex";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 export default createStore({
   state: {
@@ -40,6 +41,34 @@ export default createStore({
         console.log(data.data.token);
 
         localStorage.setItem("token", data.data.token);
+      } catch (error) {
+        console.log(error);
+      }
+    },
+
+    async registrarTutor(commit, tutor) {
+
+     
+      
+
+      let str = tutor.CoursesMaster;
+      let arr = str.split(','); 
+      tutor.CoursesMaster = arr
+      //dividir la cadena de texto por una coma
+      console.log(arr);
+      try {
+        //const res = await fetch
+        const data = await axios.post(
+          "http://localhost:3000/tutor",
+          tutor
+        );
+
+        Swal.fire(
+          'Good job!',
+          'You clicked the button!',
+          'success'
+        )
+        console.log(data);
       } catch (error) {
         console.log(error);
       }
