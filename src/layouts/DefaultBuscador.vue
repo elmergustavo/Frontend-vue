@@ -3,7 +3,7 @@
         <header>
                 <nav>
                     <div>
-                        <img class="logo" src="@/static/image/logo.png" alt="Logo-TeAyudo">
+                        <img class="logo" src="https://github.com/Meerri/src-images/blob/main/images/logo.png?raw=true" alt="Logo-TeAyudo">
                     </div>
                     <div>
                     </div>
@@ -13,7 +13,7 @@
         <footer>
             <div class="container-footer2">
                 <div>
-                    <img class="logo2" src="@/static/image/logo.png" alt="Logo-TeAyudo">
+                    <img class="logo2" src="https://github.com/Meerri/src-images/blob/main/images/logo.png?raw=true" alt="Logo-TeAyudo">
                 </div>
                 <div>
                     <p>GT</p>

@@ -155,7 +155,12 @@ export default createStore({
 
     llevarhome(){
       router.push('/pantallaPrincipal');
+    },
+
+    llevarestudiante(){
+      router.push('/verEstudiante');
     }
+
   },
   modules: {},
 });

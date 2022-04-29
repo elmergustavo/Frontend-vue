@@ -43,15 +43,17 @@
 </template>
 
 
-<script>
-import buscador from "@/layouts/DefaultBuscador.vue";
-export default defineComponent({
-    setup() {
+// <script>
+
+// import buscador from "@/layouts/DefaultBuscador.vue";
+
+// export default defineComponent({
+//     setup() {
         
-    },
-     components: { buscador },
-})
-</script>
+//     },
+//      components: { buscador },
+// })
+// </script>
 
 
 

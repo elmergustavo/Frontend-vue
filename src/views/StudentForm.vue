@@ -96,7 +96,7 @@
       </div>
     </form>
       <a
-        href="Student"
+        @click="llevarestudiante()"
         class="btn btn-outline-success"
         style="margin-left: 100%; margin: 0.1cm"
         >Siguiente</a
@@ -119,7 +119,8 @@ export default {
   },
   components: { student },
   methods: {
-    ...mapActions(["registrarStudent"])
+    ...mapActions(["registrarStudent"]),
+    ...mapActions(["llevarestudiante"])
   },
 };
 </script>

@@ -2,7 +2,7 @@
     <main>
         <header>
             <div>
-                <img class="logo" src="@/assets/logo.png" alt="Logo-TeAyudo">
+                <img class="logo" src="https://github.com/Meerri/src-images/blob/main/images/logo.png?raw=true" alt="Logo-TeAyudo">
             </div>
         </header>
         
